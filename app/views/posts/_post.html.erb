@@ -3,7 +3,7 @@
     <strong>
       Written by: 
       <% if user_signed_in? %>
-        <%= post.user %>
+        <%= post.user.full_name %>
       <% elsif %>
         <%= "Anonymous" %>
       <% end %>

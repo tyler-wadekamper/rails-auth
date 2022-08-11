@@ -5,4 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_many :posts
+
+  validates :full_name, 
+  format: { 
+    with: /\A[a-zA-Z ]+\z/,
+    message: "only allows letters and spaces" 
+  }
 end
